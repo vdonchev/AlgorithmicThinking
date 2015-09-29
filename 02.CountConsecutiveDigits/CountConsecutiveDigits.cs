@@ -9,6 +9,7 @@
 
         static void Main()
         {
+            Console.Write("Insert series of integers, one after another = ");
             int[] nums = Console.ReadLine()
                 .ToCharArray()
                 .Select(i => int.Parse(i.ToString()))

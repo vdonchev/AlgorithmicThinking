@@ -7,6 +7,7 @@
         static void Main()
         {
             // Sample input: "You with be force the may" ;)
+            Console.Write("Insert text = ");
             string[] text = Console.ReadLine()
                 .ToLower()
                 .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);

@@ -6,6 +6,7 @@
     {
         static void Main()
         {
+            Console.Write("Insert num = ");
             int num = int.Parse(Console.ReadLine());
             Console.WriteLine(ReverseNum(num));
         }
