@@ -11,7 +11,7 @@
 
         static void Main()
         {
-            Console.Write("Insert series of integers separataed by space ot comma = ");
+            Console.Write("Insert series of integers separataed by space or comma = ");
             int[] nums = Console.ReadLine()
                 .Split(new[] {' ', ','}, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
