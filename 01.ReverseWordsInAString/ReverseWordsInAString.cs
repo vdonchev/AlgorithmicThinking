@@ -12,21 +12,20 @@
                 .ToLower()
                 .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            string[] reversedtext = new string[text.Length];
-
-            for (int word = text.Length - 1, index = 0; word >= 0; word--, index++)
+            for (int i = 0; i < text.Length / 2; i++)
             {
-                if (word == text.Length - 1)
-                {
-                    reversedtext[index] = char.ToUpper(text[word][0]) + text[word].Substring(1);
-                }
-                else
-                {
-                    reversedtext[index] = text[word];
-                }
+                Swap(ref text[i], ref text[text.Length - 1 - i]);
             }
 
-            Console.WriteLine(string.Join(" ", reversedtext));
+            text[0] = char.ToUpper(text[0][0]) + text[0].Substring(1);
+            Console.WriteLine(string.Join(" ", text));
+        }
+
+        private static void Swap(ref string left, ref string right)
+        {
+            string temp = left;
+            left = right;
+            right = temp;
         }
     }
 }
